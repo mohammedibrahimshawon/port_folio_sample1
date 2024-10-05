@@ -1,23 +1,33 @@
 /* Global Styling */
 body {
-    background-color: rgb(60, 58, 58);
+    background-color: rgb(40, 40, 40);
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #f0f0f0;
+    line-height: 1.6;
 }
 
 /* Navigation Bar */
 .nav {
     display: flex;
     justify-content: space-between;
-    background-color: bisque;
-    padding: 10px;
+    background-color: #222;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-.nav h1 {
-    font-weight: 100;
-    font-size: smaller;
+.nav a {
+    color: #fff;
     text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #444;
 }
 
 /* Hero Section */
@@ -25,43 +35,64 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: lightgoldenrodyellow;
-    padding: 20px;
-    margin: 0;
+    align-items: center;
+    background-image: linear-gradient(to right, #ff9800, #f44336);
+    color: #fff;
+    padding: 50px 40px;
 }
 
 .hero img {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
+}
+
+.me h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.me p {
+    font-size: 24px;
+    font-weight: 300;
 }
 
 /* About Section */
 .Table {
-    text-align: center;
-    background-color: aquamarine;
-    padding: 20px;
+    background-color: #333;
+    padding: 40px;
     margin: 0;
+    text-align: center;
+}
+
+.Table h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ff9800;
 }
 
 .Table table {
     width: 100%;
     border-collapse: collapse;
+    margin: 20px 0;
 }
 
 .Table th, .Table td {
-    border: 2px solid black;
-    padding: 10px;
+    border: 2px solid #555;
+    padding: 15px;
+    font-size: 18px;
+    color: #f0f0f0;
 }
 
-/* Contact Section */
-.contact {
-    text-align: center;
-    background-image: url(./img/rice.jpg);
-    padding: 20px;
-    margin: 0;
+.Table tr:nth-child(even) {
+    background-color: #444;
 }
 
 /* Skills Section */
@@ -69,17 +100,74 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
-    background-color: rgb(173, 172, 171);
-    margin: 0;
+    padding: 50px;
+    background-color: #222;
+    color: #fff;
+}
+
+.Skill .skills ul {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.Skill .skills ul li {
+    background-color: #444;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.Skill .skills ul li:hover {
+    background-color: #ff9800;
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px;
+    background-image: url(./img/rice.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.contact input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+
+.contact input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.contact input[type="submit"]:hover {
+    background-color: #f44336;
 }
 
 /* Footer Section */
 .footer {
-    background-color: beige;
-    width: 100%;
-    padding: 20px 0;
+    background-color: #222;
+    padding: 20px;
     text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 0;
 }
 
 /* Mobile Responsiveness */
@@ -93,11 +181,13 @@ body {
         margin: 20px 0;
     }
 
-    .me h2, .me p, .Table, .skills ul {
-        margin-left: 0;
+    .nav {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .nav .menu button {
-        margin: 5px;
+    .nav a {
+        display: block;
+        margin: 10px 0;
     }
 }
