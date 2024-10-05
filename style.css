@@ -1,64 +1,103 @@
-/* body {
-    background-color: black;
-    color: white;
-} */
-
-
-.me h2{
-    margin-left: 100px;
-    /* font-size: small;
-    font-weight: bolder; */
-    margin-top: 100px;
-    font-family: 'Times New Roman', Times, serif;
-    margin-bottom: none;
-
+/* Global Styling */
+body {
+    background-color: rgb(60, 58, 58);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-.me p {
-    color: gray;
-    margin-left: 100px;
-    margin-top: none;
-    font-size: 60px;
-}
-
-.nav{
+/* Navigation Bar */
+.nav {
     display: flex;
     justify-content: space-between;
     background-color: bisque;
+    padding: 10px;
 }
+
 .nav h1 {
     font-weight: 100;
     font-size: smaller;
-    text-decoration: white;
+    text-decoration: none;
 }
 
-.hero{
+/* Hero Section */
+.hero {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: lightgoldenrodyellow;
+    padding: 20px;
+    margin: 0;
 }
 
 .hero img {
-    width: 600px;
-    height:300px;
-    margin-right: 150px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
-    margin-top: 100px;
+    margin: 20px 0;
 }
 
-.Table{
-
+/* About Section */
+.Table {
     text-align: center;
     background-color: aquamarine;
-    
+    padding: 20px;
+    margin: 0;
 }
 
-.Table  table, th, td{
+.Table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Table th, .Table td {
     border: 2px solid black;
-
-    
+    padding: 10px;
 }
 
+/* Contact Section */
 .contact {
     text-align: center;
+    background-image: url(./img/rice.jpg);
+    padding: 20px;
+    margin: 0;
+}
+
+/* Skills Section */
+.Skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(173, 172, 171);
+    margin: 0;
+}
+
+/* Footer Section */
+.footer {
+    background-color: beige;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero, .Skill {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero img {
+        margin: 20px 0;
+    }
+
+    .me h2, .me p, .Table, .skills ul {
+        margin-left: 0;
+    }
+
+    .nav .menu button {
+        margin: 5px;
+    }
 }
